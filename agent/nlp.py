@@ -276,7 +276,7 @@ class IntentParser:
             IntentPattern(
                 name="set_agent_parameter",
                 pattern=re.compile(
-                    r"(set|change|update)\s+(?P<parameter>[a-zA-Z0-9_\-\.\\%]+)\s+(for|on)\s+(?:server\s+)?(?P<server>[a-zA-Z0-9_\-\.]+)\s+and\s+(?:agent\s+)?(?P<agent>[a-zA-Z0-9_\-\.]+)\s+(to|=)\s*(?:value\s+)?(?P<value>[^\s]+)",
+                    r"(set|change|update)\s+(?P<parameter>[a-zA-Z0-9_\-\.\\%]+)\s+(for|on)\s+(?:server\s+)?(?P<server>[a-zA-Z0-9_\-\.]+)\s+(?:and\s+)?(?:agent\s+)?(?P<agent>[a-zA-Z0-9_\-\.]+)\s+(to|=)\s*(?:value\s+)?(?P<value>[^\s]+)",
                     re.IGNORECASE,
                 ),
                 explanation="Detected a request to set an agent parameter with explicit server and agent.",
@@ -285,7 +285,7 @@ class IntentParser:
             IntentPattern(
                 name="set_agent_parameter",
                 pattern=re.compile(
-                    r"(set|change|update)\s+(?P<parameter>[a-zA-Z0-9_\-\.\\%]+)\s*(to|=)\s*(?:value\s+)?(?P<value>[^\s]+)\s+(for|on)\s+(?:server\s+)?(?P<server>[a-zA-Z0-9_\-\.]+)\s+and\s+(?:agent\s+)?(?P<agent>[a-zA-Z0-9_\-\.]+)",
+                    r"(set|change|update)\s+(?P<parameter>[a-zA-Z0-9_\-\.\\%]+)\s*(to|=)\s*(?:value\s+)?(?P<value>[^\s]+)\s+(for|on)\s+(?:server\s+)?(?P<server>[a-zA-Z0-9_\-\.]+)\s+(?:and\s+)?(?:agent\s+)?(?P<agent>[a-zA-Z0-9_\-\.]+)",
                     re.IGNORECASE,
                 ),
                 explanation="Detected a request to set an agent parameter with explicit value, server, and agent.",
@@ -294,7 +294,7 @@ class IntentParser:
             IntentPattern(
                 name="set_agent_parameter",
                 pattern=re.compile(
-                    r"(set|change|update)\s+(?P<parameter>[a-zA-Z0-9_\-\.\\%]+)\s+(for|on)\s+(?:agent\s+)?(?P<agent>[a-zA-Z0-9_\-\.]+)\s+(on|for)\s+(?:server\s+)?(?P<server>[a-zA-Z0-9_\-\.]+)\s+(to|=)\s*(?:value\s+)?(?P<value>[^\s]+)",
+                    r"(set|change|update)\s+(?P<parameter>[a-zA-Z0-9_\-\.\\%]+)\s+(for|on)\s+(?:agent\s+)?(?P<agent>[a-zA-Z0-9_\-\.]+)\s+(?:on|for\s+)?(?:server\s+)?(?P<server>[a-zA-Z0-9_\-\.]+)\s+(to|=)\s*(?:value\s+)?(?P<value>[^\s]+)",
                     re.IGNORECASE,
                 ),
                 explanation="Detected a request to set an agent parameter with explicit agent, server, and value.",
@@ -303,7 +303,7 @@ class IntentParser:
             IntentPattern(
                 name="set_agent_parameter",
                 pattern=re.compile(
-                    r"(set|change|update)\s+(?P<parameter>[a-zA-Z0-9_\-\.\\%]+)\s*(to|=)\s*(?:value\s+)?(?P<value>[^\s]+)\s+(for|on)\s+(?:agent\s+)?(?P<agent>[a-zA-Z0-9_\-\.]+)\s+(on|for)\s+(?:server\s+)?(?P<server>[a-zA-Z0-9_\-\.]+)",
+                    r"(set|change|update)\s+(?P<parameter>[a-zA-Z0-9_\-\.\\%]+)\s*(to|=)\s*(?:value\s+)?(?P<value>[^\s]+)\s+(for|on)\s+(?:agent\s+)?(?P<agent>[a-zA-Z0-9_\-\.]+)\s+(?:on|for\s+)?(?:server\s+)?(?P<server>[a-zA-Z0-9_\-\.]+)",
                     re.IGNORECASE,
                 ),
                 explanation="Detected a request to set an agent parameter with explicit value, agent, and server.",
